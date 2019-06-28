@@ -21,7 +21,5 @@ func DeleteByIDHandler(c *gin.Context) {
 	util.InternalServerError(c, err)
 
 	stmt.Exec(id)
-	util.InternalServerError(c, err)
-
 	c.JSON(http.StatusOK, gin.H{ "status": "success" })
 }
